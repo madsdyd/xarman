@@ -21,8 +21,8 @@
 #include "log.hh"
 #ifdef DEBUG
 #include <iostream>
-#include <strstream>
-#include <iomanip.h>
+#include <sstream>
+#include <iomanip>
 
 #include <SDL/SDL.h>
 //#include "console.hh"
@@ -66,7 +66,7 @@ void TLog::SetLevel(int nlevel) {
  * *********************************************************************/
 void TLog::AddLine(int level_, char * filename, int lineno, string line) {
   if (level_ <= level) {
-    ostrstream tmp;
+    ostringstream tmp;
     tmp << "LOG: " << loglevel_to_name[level_] << " in "
 	<< setw(20) << filename << ":"
 	<< setw(4)  << setiosflags(ios::left) << lineno

@@ -1,7 +1,7 @@
 # Damn it, this is a -*-rpm-spec-*- file.
 %define name xarman
 %define version @VERSION@
-%define release 1
+%define release 2
 %define serial  1
 %define prefix  /usr
 
