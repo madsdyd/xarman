@@ -658,15 +658,15 @@ void GameOver(int looser) {
   } while (a > 0);
   
   /** Scroll down the game area while updating */
-  for (a=0;a<100;a++) {
+  for (a=0;a<200;a++) {
     if (GameSpeed == 1)
-      SDL_Delay(40);
-    else if (GameSpeed == 2)
       SDL_Delay(20);
+    else if (GameSpeed == 2)
+      SDL_Delay(10);
     Cls();
     // Stars();
     Text(looser);
-    Board(a*2);
+    Board(a);
     Score();
     Flip();
   }
@@ -702,15 +702,15 @@ void GameOver(int looser) {
   SetPlayers();
   
   /** Scroll up again while updating*/
-  for (a=1;a<100;a++) {
+  for (a=1;a<200;a++) {
     if (GameSpeed == 1)
-      SDL_Delay(40);
-    else if (GameSpeed == 2)
       SDL_Delay(20);
+    else if (GameSpeed == 2)
+      SDL_Delay(10);
     // Stars();
     Text(looser);
     Cls();
-    Board(200-a*2);
+    Board(200-a);
     Score();
     Flip();
     Cls();
