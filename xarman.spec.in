@@ -1,0 +1,55 @@
+# Damn it, this is a -*-rpm-spec-*- file.
+%define name xarman
+%define version @VERSION@
+%define release 1
+%define serial  1
+%define prefix  /usr
+
+Summary: SDL 2 player minesweeper-like action game
+Name:          %{name}
+Version:       %{version}
+Release:       %{release}
+Serial:        %{serial}
+Copyright:     GPL
+Group:         Games/Arcade
+Url:           http://xarman.sf.net/
+Source:        %{name}-%{version}.tar.gz
+Packager:      Mads Dydensborg <madsdyd@challenge.dk>
+BuildRoot:     /var/tmp/%{name}-%{version}-root 
+Requires:      libSDL1.2 >= 1.2.2, libSDL_image1.2 >= 1.2.0, libSDL_mixer1.2 >= 1.2.0
+
+%description
+An addictive two player cross between Minesweeper and Dyna Blaster.
+
+The Great War (World War IV) destroyed all life on planet Earth. Two
+revival clans got away in large space stations. Now 50 years after,
+both clans want to reconquer the Earth. But the ground is covered with
+mines. The clans send specially designed cyborgs to conquer
+terrain. These cyborgs are equipped with a mine scanner. They always
+know how many mines there are in a short radius. And they can find the
+mines, but that takes time. The red and the blue team fights to get
+the land first. Only one clan can move back to Earth.
+
+%prep
+%setup
+
+%build
+./configure --prefix=%{prefix} --disable-debug --enable-optimize
+make
+rm -rf %{buildroot}
+mkdir -p %{buildroot}%{prefix}
+
+
+%install
+make prefix=%{buildroot}%{prefix} install
+
+%clean
+rm -rf %{buildroot}
+
+%files
+%doc ChangeLog
+%doc AUTHORS
+%doc COPYING
+%doc README
+%doc TODO
+%attr(755,root,root) %{prefix}
