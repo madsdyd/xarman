@@ -234,7 +234,10 @@ int main(int argc, char*argv[]) {
   SoundManager = new TSoundManager(SoundOn);
   Assert(SoundManager != NULL, "Unable to create SoundManager");
   LogLine(LOG_VERBOSE, "SoundManager Initialized");
-  
+
+  /* **********************************************************************
+   * Load the sounds
+   * *********************************************************************/
   sound_init();
 
   /**  randomize(); */
@@ -249,7 +252,7 @@ int main(int argc, char*argv[]) {
   LogLine(LOG_VERBOSE, "SurfaceManager Initialized");
 
   /* **********************************************************************
-   * Initialize the data
+   * Load the graphics
    * *********************************************************************/
   data_init();
 
