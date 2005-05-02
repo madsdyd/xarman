@@ -34,6 +34,27 @@ TSurfaceManager::TSurfaceManager() : TRessourceManager<SDL_Surface>() {
 }
 
 
+// Destructor
+TSurfaceManager::~TSurfaceManager() {
+  UnloadRessources();
+}
+
+#ifdef NEW_BROKEN_CODE
+// UnloadRessources
+void TSurfaceManager::UnloadRessources() {
+  TNameToStorageMapIterator End = NameToStorageMap.end();
+  TNameToStorageMapIterator i;
+  for (i = NameToStorageMap.begin(); i != End; i++) {
+    if ((*i).second->HasRefs()) {
+      LogLine(LOG_ERROR, "Releasing " + (*i).second->GetName() + 
+	      " - ressource still referenced");
+      UnloadRessource((*i).second->TakeRessource());
+      delete ((*i).second);
+    }
+  }
+}
+#endif
+
 /* **********************************************************************
  * Load and realease
  * Load will convert the surface to the display format. 

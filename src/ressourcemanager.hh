@@ -126,6 +126,18 @@ protected:
   /* UnloadRessource should totally get rid of the ressource -
      res will be meaningless afterwards and will never be referenced */
   virtual void UnloadRessource(res_t *) = 0;
+  void UnloadRessources() {
+    TNameToStorageMapIterator End = NameToStorageMap.end();
+    TNameToStorageMapIterator i;
+    for (i = NameToStorageMap.begin(); i != End; i++) {
+      if ((*i).second->HasRefs()) {
+	LogLine(LOG_ERROR, "Releasing " + (*i).second->GetName() + 
+		" - ressource still referenced");
+	UnloadRessource((*i).second->TakeRessource());
+	delete ((*i).second);
+      }
+    }
+  }
   
 public:
   /* **********************************************************************
@@ -158,6 +170,7 @@ public:
  * *********************************************************************/
 template <typename res_t>
 TRessourceManager <res_t>::~TRessourceManager() {
+#ifdef OLD_BROKEN_CODE
   TNameToStorageMapIterator End = NameToStorageMap.end();
   TNameToStorageMapIterator i;
   for (i = NameToStorageMap.begin(); i != End; i++) {
@@ -168,6 +181,7 @@ TRessourceManager <res_t>::~TRessourceManager() {
       delete ((*i).second);
     }
   }
+#endif
 };
 
 

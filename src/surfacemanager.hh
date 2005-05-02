@@ -29,8 +29,10 @@ class TSurfaceManager : public TRessourceManager<SDL_Surface> {
 protected:
   SDL_Surface * LoadRessource(string filename);
   void UnloadRessource(SDL_Surface * surface);
+  //  void UnloadRessources();
 public:
   TSurfaceManager();
+  virtual ~TSurfaceManager();
 };
 
 extern TSurfaceManager * SurfaceManager;

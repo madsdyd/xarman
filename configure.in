@@ -103,7 +103,7 @@ dnl ------------------------------------------------------------
 dnl General options
 dnl ------------------------------------------------------------
 
-WFLAGS="-Wall -Wpointer-arith -Wconversion -Wnested-externs"
+WFLAGS="-Wall -Wpointer-arith -Wconversion"
 OFLAGS="-O2 -ffast-math -fexpensive-optimizations"
 EONPFLAGS="-fomit-frame-pointer"
 

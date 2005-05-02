@@ -31,10 +31,12 @@ class TSoundManager : public TRessourceManager<Mix_Chunk> {
 protected:
   Mix_Chunk * LoadRessource(string filename);
   void UnloadRessource(Mix_Chunk * sound);
+  // void UnloadRessources();
 public:
   TSoundManager(bool _i) : TRessourceManager<Mix_Chunk>(), initialized(_i) {};
   void PlaySound(string name);
   bool initialized;
+  virtual ~TSoundManager();
 };
 
 extern TSoundManager * SoundManager;
