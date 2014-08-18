@@ -9,9 +9,10 @@ dnl tuxracer, but also some stuff from tuxkart and kde.
 dnl ------------------------------------------------------------
 dnl Setup initial stuff
 dnl ------------------------------------------------------------
+AC_INIT([xarman], [1.1.0])
+AC_INIT([src/xarman.cc])
+AM_INIT_AUTOMAKE
 
-AC_INIT(src/xarman.cc)
-AM_INIT_AUTOMAKE(xarman, "1.1.0")
 dnl Enable --maintainer-mode
 AM_MAINTAINER_MODE
 dnl Put config.h in src
