@@ -10,14 +10,13 @@ dnl ------------------------------------------------------------
 dnl Setup initial stuff
 dnl ------------------------------------------------------------
 AC_INIT([xarman], [1.1.0])
-AC_INIT([src/xarman.cc])
+AC_CONFIG_SRCDIR([src/xarman.cc])
 AM_INIT_AUTOMAKE
 
 dnl Enable --maintainer-mode
 AM_MAINTAINER_MODE
 dnl Put config.h in src
 AM_CONFIG_HEADER(src/config.h)
-
 
 dnl ------------------------------------------------------------
 dnl Make sure all flags are blank
@@ -162,6 +161,7 @@ fi
 dnl ------------------------------------------------------------
 dnl Specify data directory - stolen from tuxkart
 dnl ------------------------------------------------------------
+
 
 MY_EXPAND_DIR(xarman_datadir, "$datadir/games/$PACKAGE")
 AC_DEFINE_UNQUOTED(XARMAN_DATADIR, "$xarman_datadir", Defines the location of the data directory)
