@@ -28,11 +28,17 @@
 #include <unistd.h>
 #include <dirent.h>
 
+// For realpath
+#include <limits.h>
+#include <stdlib.h>
+
+/*
 #undef DEBUG_RES_MAN
 #ifndef DEBUG_RES_MAN
 #define LogLine(a, b)
 #define LogLineExt(a, b)
 #endif
+*/
 
 #if defined(_MSC_VER) || defined(__MINGW32__)
 #include <windows.h>
