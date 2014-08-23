@@ -1,6 +1,6 @@
 # Xarman - a simple SDL game for Linux.
 
-Xarman is an addictive two player cross between Minesweeper and Dyna Blaster.
+Xarman is an addictive micro-game, a two player cross between Minesweeper and Dyna Blaster.
 
 <p align="center">
   <img src="xarman.png" alt="Xarman screenshot"/>
