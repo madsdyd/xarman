@@ -2,7 +2,9 @@
 
 Xarman is an addictive two player cross between Minesweeper and Dyna Blaster.
 
-
+<p align="center">
+  <img src="xarman.png" alt="Xarman screenshot"/>
+</p>
 ## Contents
 
 <!-- toc -->
