@@ -724,7 +724,6 @@ void MainGame() { // MAIN LOOP!
   SDL_Event event; /** Used to read from the SDL event buffer */
   bool exit = false;
   int vict = 3; /** Holds number of victories needed */
-  // TODO: Remove int NewRound;
 
   /* Init animation arrays */
   InitAnims();
@@ -752,14 +751,11 @@ void MainGame() { // MAIN LOOP!
   /** While no player has won or escape pressed */
   while (!exit &&  
 	 (Player[RED].vict != vict) && (Player[BLUE].vict != vict)) {
-    /** TODO: Empty the char buffer - from previous games, and menu */
-    // while(0 != vga_getkey());
     
     /* Clear the screen */
     Cls();
 
     /** Set flag */
-    // TODO: Remove NewRound = 0;
     while (!exit) {
       bool breakflag = false;
       int looser = -1;

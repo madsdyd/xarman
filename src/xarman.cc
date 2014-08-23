@@ -23,7 +23,7 @@
 ***************************************************************************/
 /** Xarman - by ECC. */
 
-/** Linux conversion started at 1999.06.04, 
+/** Linux conversion to svgalib and /dev/dsp started at 1999.06.04, 
     by Mads Dydensborg <madsdyd@challenge.dk> 
  
     The DOS version uses direct hardware access to a VGA board present in the
@@ -33,11 +33,6 @@
     Sound using /dev/dsp has been aadded
     
     All comments by Mads Dydensborg start with slash-star-star.
-    
-    TODO:
-    * Check that random is correctly
-    * Fix busy waiting
-    * Is doublebuffering working?
 */
 /* Conversion to SDL, by Mads Bondo Dydensborg, started 20011211 */
 
@@ -113,8 +108,6 @@ int main(int argc, char*argv[]) {
   /** Set default values */
   int SoundOn = TRUE;
   bool fullscreen = false;
-  /* TODO: remove  char buf[512];
-       buf[0] = 0; */
   /** Scan all program options */
   while (1)
     {
