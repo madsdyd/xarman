@@ -1,0 +1,162 @@
+<h1>Xarman - a simple SDL game for Linux.</h1>
+
+<p>Xarman is an addictive micro-game, a two player cross between Minesweeper and Dyna Blaster.</p>
+
+<p align="center">
+  <img src="xarman.png" alt="Xarman screenshot"/>
+</p>
+
+<h2>Contents</h2>
+
+<!-- toc -->
+
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#credits">Credits</a></li>
+<li><a href="#story">Story</a></li>
+<li><a href="#the-game-and-controls">The game and controls</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#building-xarman">Building Xarman</a>
+<ul>
+<li><a href="#bootstrapping-only-relevant-when-building-from-github-source">Bootstrapping (only relevant when building from github source)</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#compiling">Compiling</a></li>
+<li><a href="#installing">Installing</a></li>
+</ul></li>
+<li><a href="#running-xarman">Running Xarman</a></li>
+<li><a href="#bugs">Bugs</a></li>
+</ul>
+
+<!-- toc stop -->
+
+<h2>Credits</h2>
+
+<p>Xarman was made by the members of ECC, with Xar as the coder, and
+Firimar as the artist.</p>
+
+<p>It was ported to Linux (svgalib) in June 1999, by Mads Bondo
+Dydensborg <a href="&#x6D;&#x61;&#x69;&#x6C;&#116;&#111;:&#x6D;&#x61;&#100;&#x73;&#64;&#100;&#121;&#x64;&#x65;n&#115;&#98;&#111;&#114;&#x67;&#x2E;&#100;&#x6B;">&#x6D;&#x61;&#100;&#x73;&#64;&#100;&#121;&#x64;&#x65;n&#115;&#98;&#111;&#114;&#x67;&#x2E;&#100;&#x6B;</a>. Sound module under Linux by Mads
+Bondo Dydensborg.</p>
+
+<p>It was ported to SDL in February 2002, by Mads Bondo Dydensborg.</p>
+
+<h2>Story</h2>
+
+<p>The Great War (World War IV) destroyed all life on planet Earth. Two
+revival clans got away in large space stations. Now 50 years after,
+both clans want to reconquer the Earth. But the ground is covered with
+mines. The clans send specially designed cyborgs to conquer
+terrain. These cyborgs are equipped with a mine scanner. They always
+know how many mines there are in a short radius. And they can find the
+mines, but that takes time. The red and the blue team fights to get
+the land first. Only one clan can move back to Earth.</p>
+
+<h2>The game and controls</h2>
+
+<p>The game is a 2 player cross between Minesweeper and Dyna Blaster. Red
+player is controlled by ASDW and Q, and blue player is controlled by
+JKLI and U. You are placed in one corner of the screen, and you have
+to walk around conquering land. The numbers are the amount of mines in
+a radius of 1 square from the point. You can use Q or U to scan for
+where the mines are, but this takes time. You win by marking half the
+squares with your flag, you can not take the other players
+squares. You die if you step on a mine. Race against a friend.  </p>
+
+<p>During play, you can press F11 to toggle fullscreen mode.</p>
+
+<h2>License</h2>
+
+<p>Xarman is released under the GPL.</p>
+
+<p>Copyright (C) 1999-2002 Mads Bondo Dydensborg <a href="&#x6D;&#x61;&#x69;&#108;&#x74;&#x6F;:&#x6D;&#x61;&#x64;&#x73;&#64;&#100;&#121;&#x64;e&#110;&#115;&#x62;&#111;&#114;&#x67;&#46;&#x64;k">&#x6D;&#x61;&#x64;&#x73;&#64;&#100;&#121;&#x64;e&#110;&#115;&#x62;&#111;&#114;&#x67;&#46;&#x64;k</a>
+(Parts may be (C) ECC)</p>
+
+<p>Please see the file "AUTHORS" for a list of contributers</p>
+
+<p>This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA   </p>
+
+<h2>Requirements</h2>
+
+<p>SDL, SDL<em>mixer, SDL</em>image</p>
+
+<p>Xarman have only been tested on Linux, using version 1.2.2 of SDL and
+1.2.0 of SDL<em>mixer and SDL</em>image with X as the target.</p>
+
+<h2>Building Xarman</h2>
+
+<p>Xarman uses the GNU autotools, and configuration and installation
+should be quite straightforward.</p>
+
+<h3>Bootstrapping (only relevant when building from github source)</h3>
+
+<p>If you have checked out the sources from github, you should run the shell
+script <code>bootstrap</code>, which will create the script <code>configure</code> for you.</p>
+
+<h3>Configuration</h3>
+
+<p>If you have downloaded a tar ball, the configure script should already
+be in place. Run <code>./configure --help</code> to get an overview of the options.</p>
+
+<p>The file <code>INSTALL</code> provides generic installation instructions for the
+configure script.</p>
+
+<p>If configure fails, it is most likely because you are missing needed
+libraries. The configure script will try to identify all missing
+libraries when run, and will let you know what is missing.</p>
+
+<h3>Compiling</h3>
+
+<p>After a successful configuration step, you can compile xarman like
+this:</p>
+
+<p><code>$ make</code></p>
+
+<p>If the installation fails and it is during the linking stage, it is
+most likely because you have discovered a dependency on a library,
+that the configure script does not take into account. A likely cause
+is that you need a <code>devel</code> package for some library on your Linux
+system. Please install the necessary package and <code>make</code> again.</p>
+
+<h3>Installing</h3>
+
+<p>You do not need to install xarman to test it out. But if you wish, you
+can issue the command</p>
+
+<p><code>$ make install</code></p>
+
+<p>to install xarman to the location you configured for (default
+<code>/usr/local/</code>). Xarman does not follow the LSB directions of installing
+games to <code>/usr/local/games/bin/xarman</code>, but instead installs to
+<code>/usr/local/bin/xarman</code>. Shared files are installed into
+<code>/usr/local/share/games/xarman</code> however. </p>
+
+<h2>Running Xarman</h2>
+
+<p>After building xarman, you can either issue the command</p>
+
+<p><code>$ src/xarman</code></p>
+
+<p>or, if you have installed xarman</p>
+
+<p><code>$/path/to/xarman</code></p>
+
+<p>to run xarman.</p>
+
+<p>For mostly selfexplaining options run xarman with the <code>--help</code> option.</p>
+
+<h2>Bugs</h2>
+
+<p>No know bugs.</p>
