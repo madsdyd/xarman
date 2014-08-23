@@ -1,3 +1,7 @@
+2014-08-23  Mads Bondo Dydensborg  <mads@dydensborg.dk>
+
+	* Compiles cleanly under gcc 4.8.2
+
 2002-12-07  Mads Bondo Dydensborg  <mads@dydensborg.dk>
 
 	* Now can compile under gcc 3.2
