@@ -5,15 +5,23 @@ Xarman is an addictive two player cross between Minesweeper and Dyna Blaster.
 
 ## Contents
 
-- Credits
-- Story
-- The game & controls
-- License
-- Requirements
-- Building xarman
-- Running xarman
-- Bugs
-- Final Notes
+<!-- toc -->
+
+* [Contents](#contents)
+* [Credits](#credits)
+* [Story](#story)
+* [The game and controls](#the-game-and-controls)
+* [License](#license)
+* [Requirements](#requirements)
+* [Building Xarman](#building-xarman)
+  * [Bootstrapping (only relevant when building from github source)](#bootstrapping-only-relevant-when-building-from-github-source)
+  * [Configuration](#configuration)
+  * [Compiling](#compiling)
+  * [Installing](#installing)
+* [Running Xarman](#running-xarman)
+* [Bugs](#bugs)
+
+<!-- toc stop -->
 
 ## Credits
 
@@ -88,16 +96,14 @@ should be quite straightforward.
 ### Bootstrapping (only relevant when building from github source)
 
 If you have checked out the sources from github, you should run the shell
-script "bootstrap", which will create the script "configure" for you.
-For reasons not understood by the developer, it may be necessary to
-run this script twice to get the necessary files created.
+script `bootstrap`, which will create the script `configure` for you.
 
 ### Configuration
 
 If you have downloaded a tar ball, the configure script should already
-be in place. Run "./configure --help" to get an overview of the options.
+be in place. Run `./configure --help` to get an overview of the options.
 
-The file "INSTALL" provides generic installation instructions for the
+The file `INSTALL` provides generic installation instructions for the
 configure script.
 
 If configure fails, it is most likely because you are missing needed
@@ -109,44 +115,40 @@ libraries when run, and will let you know what is missing.
 After a successful configuration step, you can compile xarman like
 this:
 
-$ make
-
-You will most likely get a number of warnings (mostly from compiling
-the SDL_console source, which is provided as part of xarman).
-
-Compiling xarman takes about 1 minute on a PIII 666 with 256 MB ram.
+`$ make`
 
 If the installation fails and it is during the linking stage, it is
 most likely because you have discovered a dependency on a library,
 that the configure script does not take into account. A likely cause
-is that you need a "devel" package for some library on your Linux
-system. Please install the necessary package and "make" again.
-
-You are very welcome to write the developer, if you have problems with
-the xarman build process.
+is that you need a `devel` package for some library on your Linux
+system. Please install the necessary package and `make` again.
 
 ### Installing
 
 You do not need to install xarman to test it out. But if you wish, you
 can issue the command
 
-$ make install
+`$ make install`
 
 to install xarman to the location you configured for (default
-/usr/local/). Xarman does not follow the LSB directions of installing
-games to /usr/local/games/bin/xarman, but instead installs to
-/usr/local/bin/xarman. Shared files are installed into
-/usr/local/share/games/xarman however. 
+`/usr/local/`). Xarman does not follow the LSB directions of installing
+games to `/usr/local/games/bin/xarman`, but instead installs to
+`/usr/local/bin/xarman`. Shared files are installed into
+`/usr/local/share/games/xarman` however. 
 
 ## Running Xarman
 
 After building xarman, you can either issue the command
-$src/xarman
+
+`$ src/xarman`
+
 or, if you have installed xarman
-$/path/to/xarman
+
+`$/path/to/xarman`
+
 to run xarman.
 
-For mostly selfexplaining options run xarman with the --help option.
+For mostly selfexplaining options run xarman with the `--help` option.
 
 ## Bugs
 
