@@ -1,12 +1,9 @@
-2014-08-18: Just imported this old project from SourceForge - will try to 
-update readme at some point.
+# Xarman - a simple SDL game for Linux.
 
---------
+Xarman is an addictive two player cross between Minesweeper and Dyna Blaster.
 
-This is the readme file for xarman.
 
-----------------------------------------------------------------------
-* CONTENTS
+## Contents
 
 - Credits
 - Story
@@ -18,19 +15,18 @@ This is the readme file for xarman.
 - Bugs
 - Final Notes
 
-----------------------------------------------------------------------
-* CREDITS
+## Credits
 
-Xarman was made by the members of ECC, with Xar as the coder, and Firimar as 
-the artist.
+Xarman was made by the members of ECC, with Xar as the coder, and
+Firimar as the artist.
 
-Ported to Linux (svgalib) in June 1999, by Mads Bondo Dydensborg 
-<mads@dydensborg.dk>. Sound module under Linux by Mads Bondo Dydensborg.
+It was ported to Linux (svgalib) in June 1999, by Mads Bondo
+Dydensborg <mads@dydensborg.dk>. Sound module under Linux by Mads
+Bondo Dydensborg.
 
-Ported to SDL in February 2002, by Mads Bondo Dydensborg.
+It was ported to SDL in February 2002, by Mads Bondo Dydensborg.
 
-----------------------------------------------------------------------
-* STORY
+## Story
 
 The Great War (World War IV) destroyed all life on planet Earth. Two
 revival clans got away in large space stations. Now 50 years after,
@@ -41,8 +37,7 @@ know how many mines there are in a short radius. And they can find the
 mines, but that takes time. The red and the blue team fights to get
 the land first. Only one clan can move back to Earth.
 
-----------------------------------------------------------------------
-* THE GAME AND CONTROLS
+## The game and controls
 
 The game is a 2 player cross between Minesweeper and Dyna Blaster. Red
 player is controlled by ASDW and Q, and blue player is controlled by
@@ -55,8 +50,7 @@ squares. You die if you step on a mine. Race against a friend.
 
 During play, you can press F11 to toggle fullscreen mode.
 
-----------------------------------------------------------------------
-* LICENSE
+## License
 
 Xarman is released under the GPL.
 
@@ -79,28 +73,26 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA   
 
-----------------------------------------------------------------------
-* REQUIREMENTS
+## Requirements
 
 SDL, SDL_mixer, SDL_image
 
 Xarman have only been tested on Linux, using version 1.2.2 of SDL and
 1.2.0 of SDL_mixer and SDL_image with X as the target.
 
-----------------------------------------------------------------------
-* BUILDING XARMAN
+## Building Xarman
 
 Xarman uses the GNU autotools, and configuration and installation
 should be quite straightforward.
 
-* Bootstrapping (only relevant for cvs users)
+### Bootstrapping (only relevant when building from github source)
 
-If you have checked out the sources from cvs, you should run the shell
+If you have checked out the sources from github, you should run the shell
 script "bootstrap", which will create the script "configure" for you.
 For reasons not understood by the developer, it may be necessary to
 run this script twice to get the necessary files created.
 
-* Configuration
+### Configuration
 
 If you have downloaded a tar ball, the configure script should already
 be in place. Run "./configure --help" to get an overview of the options.
@@ -112,7 +104,7 @@ If configure fails, it is most likely because you are missing needed
 libraries. The configure script will try to identify all missing
 libraries when run, and will let you know what is missing.
 
-* Compiling
+### Compiling
 
 After a successful configuration step, you can compile xarman like
 this:
@@ -133,12 +125,12 @@ system. Please install the necessary package and "make" again.
 You are very welcome to write the developer, if you have problems with
 the xarman build process.
 
-* Installing
+### Installing
 
 You do not need to install xarman to test it out. But if you wish, you
 can issue the command
 
-$make install
+$ make install
 
 to install xarman to the location you configured for (default
 /usr/local/). Xarman does not follow the LSB directions of installing
@@ -146,8 +138,7 @@ games to /usr/local/games/bin/xarman, but instead installs to
 /usr/local/bin/xarman. Shared files are installed into
 /usr/local/share/games/xarman however. 
 
-----------------------------------------------------------------------
-* RUNNING XARMAN
+## Running Xarman
 
 After building xarman, you can either issue the command
 $src/xarman
@@ -157,15 +148,8 @@ to run xarman.
 
 For mostly selfexplaining options run xarman with the --help option.
 
-----------------------------------------------------------------------
-* BUGS
+## Bugs
 
-Why, of course. Look at the TODO file for _some_ of the _known_ ones.
+No know bugs.
 
-Please report bugs and/or send patches to the developer - it will make
-you fell all warm and fuzzy inside....
 
-----------------------------------------------------------------------
-* FINAL NOTES
-
-You read this far? Amazing....
