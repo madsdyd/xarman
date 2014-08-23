@@ -8,7 +8,7 @@
     copyright            : (C) 1999 by Mads Bondo Dydensborg
                            (Parts may be (C) ECC)
  
-    email                : madsdyd@challenge.dk
+    email                : mads@dydensborg.dk
  
  ***************************************************************************/
  
@@ -24,7 +24,7 @@
 /** Xarman - by ECC. */
 
 /** Linux conversion to svgalib and /dev/dsp started at 1999.06.04, 
-    by Mads Dydensborg <madsdyd@challenge.dk> 
+    by Mads Dydensborg <mads@dydensborg.dk> 
  
     The DOS version uses direct hardware access to a VGA board present in the
     machine. The Linux version uses svgalib to access the video hardware
@@ -160,7 +160,7 @@ int main(int argc, char*argv[]) {
    * *********************************************************************/
   cout << "Xarman " << VERSION << endl
        << "Copyright (C) 2002 Mads Bondo Dydensborg "
-       << "<madsdyd@challenge.dk>" << endl 
+       << "<mads@dydensborg.dk>" << endl 
        << "Parts Copyright (C) ECC" << endl 
        << "Xarman comes with ABSOLUTLY NO WARRANTY." << endl
        << "This is free software, and you are welcome to "

@@ -8,7 +8,7 @@
     copyright            : (C) 1999 by Mads Bondo Dydensborg
                            (Parts may be (C) ECC)
  
-    email                : madsdyd@challenge.dk
+    email                : mads@dydensborg.dk
  
  ***************************************************************************/
  

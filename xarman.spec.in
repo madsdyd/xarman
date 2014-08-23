@@ -14,7 +14,7 @@ Copyright:     GPL
 Group:         Games/Arcade
 Url:           http://xarman.sf.net/
 Source:        %{name}-%{version}.tar.gz
-Packager:      Mads Dydensborg <madsdyd@challenge.dk>
+Packager:      Mads Dydensborg <mads@dydensborg.dk>
 BuildRoot:     /var/tmp/%{name}-%{version}-root 
 Requires:      libSDL1.2 >= 1.2.2, libSDL_image1.2 >= 1.2.0, libSDL_mixer1.2 >= 1.2.0
 

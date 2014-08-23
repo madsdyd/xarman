@@ -8,7 +8,7 @@
     copyright            : (C) 1999 by Mads Bondo Dydensborg
                            (Parts may be (C) ECC)
  
-    email                : madsdyd@challenge.dk
+    email                : mads@dydensborg.dk
  
  ***************************************************************************/
  
@@ -23,8 +23,8 @@
 ***************************************************************************/
 #include "data.hh"
 /** Xarman data file
-    Ported to linux g++ by Mads Dydensborg <madsdyd@challenge.dk> 19990604
-    Ported to SDL by Mads Dydensborg <madsdyd@challenge.dk> 20020902
+    Ported to linux g++ by Mads Dydensborg <mads@dydensborg.dk> 19990604
+    Ported to SDL by Mads Dydensborg <mads@dydensborg.dk> 20020902
 */
 
 #include "surfacemanager.hh"

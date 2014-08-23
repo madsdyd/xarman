@@ -25,7 +25,7 @@ Xarman was made by the members of ECC, with Xar as the coder, and Firimar as
 the artist.
 
 Ported to Linux (svgalib) in June 1999, by Mads Bondo Dydensborg 
-<madsdyd@challenge.dk>. Sound module under Linux by Mads Bondo Dydensborg.
+<mads@dydensborg.dk>. Sound module under Linux by Mads Bondo Dydensborg.
 
 Ported to SDL in February 2002, by Mads Bondo Dydensborg.
 
@@ -60,7 +60,7 @@ During play, you can press F11 to toggle fullscreen mode.
 
 Xarman is released under the GPL.
 
-Copyright (C) 1999-2002 Mads Bondo Dydensborg <madsdyd@challenge.dk>
+Copyright (C) 1999-2002 Mads Bondo Dydensborg <mads@dydensborg.dk>
 (Parts may be (C) ECC)
 
 Please see the file "AUTHORS" for a list of contributers
