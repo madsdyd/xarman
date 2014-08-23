@@ -593,8 +593,8 @@ void Score() {
   PutPix(player2x,StartY - 120 , 5, 5, ICON[17]);
   
   /** And this fills the score "pole" */
-  PutPix(player1x+1,StartY +1 - (5*(Player[RED].land / 2)), 3, 3+(5*(Player[RED].land / 2)), REDDOT);
-  PutPix(player2x+1,StartY +1- (5*(Player[BLUE].land / 2)), 3, 3+(5*(Player[BLUE].land / 2)), BLUEDOT);
+  PutPix(player1x+1,StartY +1 - (5*(Player[RED].land / 2)), 3, (short) (3+(5*(Player[RED].land / 2))), REDDOT);
+  PutPix(player2x+1,StartY +1- (5*(Player[BLUE].land / 2)), 3, (short) (3+(5*(Player[BLUE].land / 2))), BLUEDOT);
   
   //Bigger Pixs
   PutPix(0,20, 34,92, REDSIDE);
@@ -724,8 +724,7 @@ void MainGame() { // MAIN LOOP!
   SDL_Event event; /** Used to read from the SDL event buffer */
   bool exit = false;
   int vict = 3; /** Holds number of victories needed */
-  int NewRound;
-
+  // TODO: Remove int NewRound;
 
   /* Init animation arrays */
   InitAnims();
@@ -760,7 +759,7 @@ void MainGame() { // MAIN LOOP!
     Cls();
 
     /** Set flag */
-    NewRound = 0;
+    // TODO: Remove NewRound = 0;
     while (!exit) {
       bool breakflag = false;
       int looser = -1;

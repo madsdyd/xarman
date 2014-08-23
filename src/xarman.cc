@@ -113,8 +113,8 @@ int main(int argc, char*argv[]) {
   /** Set default values */
   int SoundOn = TRUE;
   bool fullscreen = false;
-  char buf[512];
-  buf[0] = 0;
+  /* TODO: remove  char buf[512];
+       buf[0] = 0; */
   /** Scan all program options */
   while (1)
     {
@@ -241,7 +241,7 @@ int main(int argc, char*argv[]) {
   sound_init();
 
   /**  randomize(); */
-  srand(time(NULL)); /** Sucks, should use time or similar */
+  srand((unsigned int) time(NULL)); /** Sucks, should use time or similar */
 
   /* **********************************************************************
    * Initialize the surface manager (requires SDL to be initialized and 

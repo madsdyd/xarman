@@ -38,7 +38,7 @@ SDL_Surface * Screen = NULL;
 
 /** ********************************************************************** */
 /** Puts a pixmap on the current context, without drawing color 0 */
-void PutPix (int x, int y, int width, int height, SDL_Surface * sprt) {
+void PutPix (short int x, short int y, short int width, short int height, SDL_Surface * sprt) {
   if (!sprt) {
     LogLine(LOG_ERROR, "Null surface passed to PutPix");
     return;
@@ -52,12 +52,23 @@ void PutPix (int x, int y, int width, int height, SDL_Surface * sprt) {
   src.h = height;
   SDL_BlitSurface(sprt, &src, Screen, &dest); 
 }
+
+void PutPix (int x, int y, short width, short height, SDL_Surface * sprt) {
+    PutPix( (short) x, (short) y, width, height, sprt );
+}
+
+
 /** ********************************************************************** */
 /** Puticon draws a 16x16 sprite at x,y into the current contex... 
     Does not draw color 0*/
-void Puticon(int x, int y, SDL_Surface * sprt) {
+void Puticon(short int x, short int y, SDL_Surface * sprt) {
   PutPix(x, y, 16, 16, sprt);
 }
+
+void Puticon(int x, int y, SDL_Surface * sprt) {
+    Puticon( (short) x, (short) y, sprt );
+}
+
 
 /** ********************************************************************** */
 /** void Cls - used to clear by moving, now changes context, and clears */
@@ -70,15 +81,15 @@ void Cls() {
 /** ********************************************************************** */
 /** Puts some text on virtual screen 0? */
 void Text(int number) {
-  int a,b;
+  short int a,b;
   /** Set up the context */
   // gl_setcontext(&(VirtualScreen[0]));
-    
+  
   switch (number) {
   case 0:
     for (a=0;a<15;a++)
       for (b=0;b<23;b++)
-	PutPix(100+(b*5), 60+(a*5), 5, 5, ICON[text1[b+(23*a)]]);
+          PutPix(100+(b*5), 60+(a*5), 5, 5, ICON[text1[b+(23*a)]]);
     break;
   case 1:
     for (a=0;a<15;a++)

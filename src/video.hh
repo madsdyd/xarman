@@ -43,11 +43,13 @@ void Cls();
 /** ********************************************************************** */
 /** Puticon draws a 16x16 sprite at x,y into the current contex... 
     Does not draw color 0*/
+void Puticon(short int x, short int y, SDL_Surface * sprt);
 void Puticon(int x, int y, SDL_Surface * sprt);
 
 /** ********************************************************************** */
 /** Puts a pixmap on the current context, without drawing color 0 */
-void PutPix (int x, int y, int width, int height, SDL_Surface * sprt);
+void PutPix (short int x, short int y, short int width, short int height, SDL_Surface * sprt);
+void PutPix (int x, int y, short int width, short int height, SDL_Surface * sprt);
 
 /** ********************************************************************** */
 /** Write some text somewhere? */
