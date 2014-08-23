@@ -162,8 +162,8 @@ dnl ------------------------------------------------------------
 dnl Specify data directory - stolen from tuxkart
 dnl ------------------------------------------------------------
 
-
-MY_EXPAND_DIR(xarman_datadir, "$datadir/games/$PACKAGE")
+dnl I am not exactly sure about datarootdir vs datadir, but here goes.
+MY_EXPAND_DIR(xarman_datadir, "$datarootdir/games/$PACKAGE")
 AC_DEFINE_UNQUOTED(XARMAN_DATADIR, "$xarman_datadir", Defines the location of the data directory)
 
 dnl AC_ARG_WITH(data-dir, [  --with-data-dir=PATH    Default xarman data directory], 
